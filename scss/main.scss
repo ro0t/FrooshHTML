@@ -1,0 +1,273 @@
+@import 'fonts';
+@import 'mixins';
+@import 'icons';
+@import 'helpers';
+@import 'effects';
+@import 'general';
+
+$font-main: 'Raleway', sans-serif;
+$color-babyblue: #0BB3D6;
+$color-gray: #515151;
+$color-yellow: #F5CB5C;
+$color-green: #d7f75b;
+$color-light-gray: #F7F7FF;
+
+html, body {
+	width: 100%;
+	height: 100%;
+	font-family: $font-main;
+}
+
+.hero-background {
+	width: 100%;
+	height: 100%;
+	background-image: url('../images/coffee.jpeg');
+	background-size: cover;
+}
+
+.overlay-menu {
+	display: none;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+	background: rgba(11,179,214,0.8);
+	z-index: 9998;
+
+	ul {
+		margin-top: 10%;
+		text-align: center;
+		font-size: 3.5em;
+		font-weight: 700;
+		list-style: none;
+	}
+}
+
+/* Sections */
+.wk-section {
+	position: relative;
+}
+
+.section-head {
+	position: static;
+
+	.menu {
+		height: 62px;
+		color: #fff;
+		font-weight: 700;
+		font-size: 1.5em;
+		border-bottom: 3px solid rgba(255,255,255,0.1);
+		@include box-sizing;
+		div[class^='menu'] {
+			height: 100%;
+			text-align: center;
+			padding: 18px 0px 21px 0px;
+			@include box-sizing;
+		}
+		.menu-froosh {
+			border-right: 3px solid rgba(255,255,255,0.1);
+			@include box-sizing;
+		}
+		.menu-menu {
+			z-index: 9999;
+			text-transform: uppercase;
+			font-size: 0.7em;
+			cursor: pointer;
+			.fa {
+				font-weight: 600;
+				font-size: 14pt;
+				-webkit-transform: scale(0.65,1);
+			}
+			a {
+				text-decoration: none;
+			}
+			.cmn-toggle-switch.cmn-toggle-switch__rot, .menu-label {
+				vertical-align: middle;
+			}
+			.menu-label {
+				margin-top: 4px;
+			}
+
+			&:hover {
+				
+			}
+		}
+	}
+	.head-text {
+		position: absolute;
+  		bottom: 12%;
+		h1 {
+			margin: 0;
+			color: $color-babyblue;
+		}
+		p {
+			margin: 0;
+			padding: 0;
+			font-weight: 700;
+			color: #fff;
+		}
+		.we-will-provide {
+			font-size: 3.5em;
+		}
+		.coffee {
+			font-size: 4.2em;
+			margin-top: -23px;
+		}
+	}
+}
+.section-signup {
+	position: relative;
+	background: $color-yellow;
+	padding: 20px;
+	color: #fff;
+
+	h1 {
+		margin-bottom: -15px;
+	}
+
+	h3 {
+		color: $color-gray;
+	}
+
+	form {
+		margin-top: 25px;
+		width: 100%;
+		text-align: right;
+
+		input[type="text"] {
+			border: 3px solid $color-gray;
+			border-right: 0;
+			padding: 15px 20px;
+			background: transparent;
+			display: inline-block;
+			vertical-align: top;
+			margin-right: -4px;
+			outline: 0;
+			width: 250px;
+		}
+
+		input[type="text"]::-webkit-input-placeholder {
+			color: $color-gray;
+		}
+
+		input[type="text"]:-moz-placeholder { /* Firefox 18- */
+			color: $color-gray;
+		}
+
+		input[type="text"]::-moz-placeholder {  /* Firefox 19+ */
+			color: $color-gray;
+		}
+
+		input[type="text"]:-ms-input-placeholder {  
+			color: $color-gray;
+		}
+
+		button {
+			display: inline-block;
+			vertical-align: top;
+			outline: 0;
+			border: 0;
+			background: $color-gray;
+			color: $color-yellow;
+			padding: 7px 6px;
+			text-transform: uppercase;
+			font-size: 11pt;
+			max-width: 70px;
+			font-weight: bold;
+		}
+	}
+}
+	
+.section-browsers {
+	height: 560px;
+	padding: 70px;
+	background: $color-light-gray;
+	position: relative;
+	overflow: hidden;
+
+	.browsers {
+		width: 100%;
+		height: 500px;
+		background: url(../images/browsers.png);
+		background-size: cover;
+
+		img.preview-1 {
+			display: block;
+			position: absolute;
+			width: 708px;
+			height: 500px;
+			bottom: -66px;
+			z-index: 2;
+		}
+
+		img.preview-2 {
+			display: block;
+			position: absolute;
+			z-index: 1;
+			width: 566px;
+			height: 400px;
+			bottom: -37px;
+			right: 15px;
+		}
+	}
+}
+
+.section-fruits {
+	padding: 70px;
+	background: $color-babyblue;
+
+	p {
+		/*text-align: justify;*/
+		font-size: 16pt;
+		line-height: 38px;
+		color: #fff;
+	}
+}
+
+.wk-arrow-after {
+
+	&:after {
+		position: absolute;
+		width: 35px;
+		height: 35px;
+		content: '';
+		display: block;
+		bottom: -17.5px;
+		left: 50%;
+		margin-left: -17.5px;
+		background: inherit;
+		z-index: 999;
+		@include transform(rotate(-45deg));
+	}
+}
+
+.wk-arrow-before {
+
+	&:before {
+		position: absolute;
+		width: 35px;
+		height: 35px;
+		content: '';
+		display: block;
+		top: -17.5px;
+		left: 50%;
+		margin-left: -17.5px;
+		background: inherit;
+		z-index: 999;
+		@include transform(rotate(-45deg));
+	}
+}
+
+[class^="hvr-"] {
+	background: $color-babyblue;
+	display: none !important;
+}
+
+/* Grid */
+@media (min-width: 1200px) {
+	.container {
+	  	width: 1170px;
+	  	margin: 0 auto;
+	}
+}	

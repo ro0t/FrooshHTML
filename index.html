@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link rel="stylesheet" href="css/bootstrap.min.css" >
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+	<body>
+		<div class="overlay-menu">
+			<ul>
+				<li>FROOSH</li>
+				<li>ABOUT</li>
+				<li>BOTTLES</li>
+				<li>SEARCH</li>
+			</ul>	
+		</div>
+		<div class="hero-background">
+			<section class="wk-section section-head theme-bg">
+				<div class="menu">
+					<div class="menu-froosh col-md-6">
+				        <div>Froosh</div>
+					</div>
+					<div class="menu-menu col-md-6">
+				        <button class="cmn-toggle-switch cmn-toggle-switch__rot">
+							<span>toggle menu</span>
+						</button>
+						<label class="ib menu-label">Menu</label>
+					</div>
+				</div>
+				<div class="container">
+					<div class="head-text row">
+						<div class="col-md-12">
+							<div class="no-worries animated fadeInLeft">
+								<h1>No worries</h1>
+								<p class="we-will-provide">We will provide</p>
+								<p class="coffee">coffee</p>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</section>
+		</div>
+		<section class="wk-section section-signup wk-arrow-after">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<h1>Sign up for juciy emails</h1>
+						<h3>We promise we won't spam</h3>
+					</div>
+					<div class="col-md-6">
+						<form method="post" action="#signup">
+							<input type="text" name="email" placeholder="Enter your e-mail address">
+							<button type="submit">Sign Up</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="wk-section section-browsers">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="browsers">
+							<img class="preview-1" src="images/browser-1.jpg" alt="Froosh - HTML Template">
+							<img class="preview-2" src="images/browser-2.jpg" alt="Some random theme we need to switch out..">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="wk-section section-fruits">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<p>Aenean sodales quam non eleifend porttitor. Suspendisse nec tellus eu augue lacinia venenatis. Etiam eget dolor urna. Duis rutrum efficitur felis, at scelerisque mauris aliquet sollicitudin. Donec et libero tellus. Fusce quis ante suscipit, pretium ipsum ut, sodales justo. Proin vehicula tincidunt sollicitudin. Sed pulvinar condimentum velit, non vestibulum lacus tincidunt ultricies. Quisque vitae nisi id sem rutrum blandit a at justo.</p>
+					</div>
+					<div class="col-md-6"><img src="images/fruits.png" /></div>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script type="text/javascript">
+(function() {
+
+	"use strict";
+
+	// Menu icon rotation
+	$(".menu").on("click", function (e) {
+		e.preventDefault();
+		var $toggleSwitch = $(this).find(".cmn-toggle-switch");
+		($toggleSwitch.hasClass("active") === true) ? $toggleSwitch.removeClass("active") : $toggleSwitch.addClass("active");
+	});
+
+})();
+</script>
